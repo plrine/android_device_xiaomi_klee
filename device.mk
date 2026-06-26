@@ -193,10 +193,6 @@ PRODUCT_PACKAGES += \
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Fastboot
-PRODUCT_PACKAGES += \
-    fastbootd
-
 # Fingerprint
 $(call soong_config_set,XIAOMI_BIOMETRICS_FINGERPRINT,IMPL_VER,V2)
 PRODUCT_PACKAGES += \
