@@ -86,8 +86,20 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
-    ('odm/lib64/libmt_mitee.so', 'vendor/bin/hw/android.hardware.security.keymint@3.0-service.mitee', 'odm/lib64/libgoogleid.so'): blob_fixup()
-        .replace_needed('android.hardware.security.keymint-V3-ndk.so', 'android.hardware.security.keymint-V3-ndk-v34.so'),
+    (
+        'odm/lib64/libmt_mitee.so',
+        'vendor/bin/hw/android.hardware.security.keymint@3.0-service.mitee',
+        'odm/lib64/libgoogleid.so',
+        'vendor/lib64/lib_android_keymaster_keymint_utils-v34.so',
+        'vendor/lib64/libkeymint-v34.so',
+        'vendor/lib64/libkeymint_support-v34.so',
+        'vendor/lib64/libkeymint_remote_prov_support-v34.so'
+    ): blob_fixup()
+        .replace_needed('android.hardware.security.keymint-V3-ndk.so', 'android.hardware.security.keymint-V3-ndk-v34.so')
+        .replace_needed('lib_android_keymaster_keymint_utils.so', 'lib_android_keymaster_keymint_utils-v34.so')
+        .replace_needed('libkeymint_support.so', 'libkeymint_support-v34.so')
+        .replace_needed('libkeymint.so', 'libkeymint-v34.so')
+        .replace_needed('libkeymint_remote_prov_support.so', 'libkeymint_remote_prov_support-v34.so'),
     (
         'vendor/bin/mnld',
         'vendor/lib64/mt6899/libpqconfig.so',
