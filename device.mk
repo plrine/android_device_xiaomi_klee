@@ -17,6 +17,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Rootdir
 PRODUCT_PACKAGES += \
+    chipinfo \
     init.connectivity.rc \
     init.mi_thermald.rc \
     init.modem.rc \
