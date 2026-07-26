@@ -8,14 +8,14 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Edith stuff.
+$(call inherit-product, vendor/edith/config/common.mk)
 
 # Inherit from klee device
 $(call inherit-product, device/xiaomi/klee/device.mk)
 
 PRODUCT_DEVICE := klee
-PRODUCT_NAME := lineage_klee
+PRODUCT_NAME := edith_klee
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := 2511FPC34G
 PRODUCT_MANUFACTURER := xiaomi
