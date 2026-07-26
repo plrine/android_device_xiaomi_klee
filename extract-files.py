@@ -294,6 +294,11 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libsink.so', 'libsink-mtk.so'),
     'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
         .apktool_patch('blob-patches/ImsService'),
+    (
+        'vendor/lib64/libmicamera_adapter.so',
+        'vendor/lib64/mt6899/libmtkcam_hal_android_app_cbadaptor.so',
+    ): blob_fixup()
+        .remove_needed('android.frameworks.displayservice@1.0.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
