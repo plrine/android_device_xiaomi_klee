@@ -1,3 +1,4 @@
+typeattribute mtk_hal_camera bpfdomain;
 binder_call(system_app, mtk_hal_camera)
 get_prop(mtk_hal_camera, camera_config_prop)
 get_prop(mtk_hal_camera, bpf_progs_loaded_prop)
