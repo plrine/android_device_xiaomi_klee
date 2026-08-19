@@ -261,6 +261,11 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libaudioclient_shim.so'),
     'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
         .apktool_patch('blob-patches/ImsService'),
+    (
+        'vendor/lib64/libmicamera_adapter.so',
+        'vendor/lib64/mt6899/libmtkcam_hal_android_app_cbadaptor.so',
+    ): blob_fixup()
+        .replace_needed('android.frameworks.displayservice@1.0.so', 'lineage.frameworks.displayservice@1.0.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

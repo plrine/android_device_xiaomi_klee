@@ -214,6 +214,7 @@ PRODUCT_PACKAGES += \
     fstab.mt6899.vendor_ramdisk
 
 # Graphics
+$(call soong_config_set_bool,surfaceflinger,register_displayservice,true)
 PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.mediatek
 
