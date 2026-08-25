@@ -1663,7 +1663,6 @@ vendor/lib64/libgpud.so
 vendor/lib64/libgralloc_extra.so
 vendor/lib64/libgralloc_metadata.so
 vendor/lib64/libgralloctypes_mtk.so
-vendor/lib64/libladder.so
 vendor/lib64/libmtkgpuserv.so
 vendor/lib64/libmtkgpuservsdk_vendor.so
 vendor/lib64/libsilkybrightnesscore.so
@@ -2026,7 +2025,6 @@ vendor/lib64/libpqxmlflagparser.so
 vendor/lib64/libpqxmlparser.so
 vendor/lib64/librgbwlightsensor.so
 vendor/lib64/libsdrparser.so
-vendor/lib64/libudf.so
 vendor/lib64/mt6899/libmml.so;SYMLINK=vendor/lib64/libmml.so
 vendor/lib64/mt6899/libmmlpqImpl.so;SYMLINK=vendor/lib64/libmmlpqImpl.so
 vendor/lib64/mt6899/libpq_cust_base.so;SYMLINK=vendor/lib64/libpq_cust_base.so
