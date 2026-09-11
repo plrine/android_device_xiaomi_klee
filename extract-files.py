@@ -259,6 +259,11 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libsink.so', 'libsink-mtk.so'),
     'system_ext/lib64/libsink-mtk.so': blob_fixup()
         .add_needed('libaudioclient_shim.so'),
+    (
+        'system/bin/spkcal',
+        'system_ext/bin/spkcal_si_o12u',
+    ): blob_fixup()
+        .add_needed('libaudiobase.so'),
     'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
         .apktool_patch('blob-patches/ImsService'),
     (
