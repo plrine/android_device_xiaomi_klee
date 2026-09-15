@@ -331,8 +331,6 @@ ENABLE_VENDOR_RIL_SERVICE := true
 $(call inherit-product, hardware/lineage/compat/frameworks/compat.mk)
 $(call inherit-product, hardware/mediatek/frameworks/mediatek-frameworks.mk)
 
-PRODUCT_PACKAGES += \
-    vendor_mdota_symlink
 
 PRODUCT_PACKAGES += \
     xiaomi-telephony-stub
