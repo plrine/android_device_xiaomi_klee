@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2026 Edith AOSP
+     SPDX-License-Identifier: Apache-2.0
+
+     Detailed specs for the POCO X8 Pro
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- About device hero card -->
+    <string name="edith_about_device_title" translatable="false">POCO X8 Pro</string>
+    <string name="edith_about_device_brand" translatable="false">Xiaomi</string>
+
+    <!-- Processor -->
+    <string name="edith_spec_cpu_summary" translatable="false">Mediatek</string>
+    <string name="edith_spec_cpu_subsummary" translatable="false">Dimensity 8500-Ultra</string>
+
+    <!-- RAM & Storage -->
+    <string name="edith_spec_mem_summary" translatable="false">LPDDR5X Ultra | UFS 4.1</string>
+
+    <!-- GPU -->
+    <string name="edith_spec_gpu_summary" translatable="false">Mali-G720 MC8</string>
+
+    <!-- Display -->
+    <string name="edith_spec_display_summary" translatable="false">6.59" 1268 x 2756</string>
+    <string name="edith_spec_display_subsummary" translatable="false">AMOLED</string>
+
+    <!-- Camera -->
+    <string name="edith_spec_camera_rear_subsummary" translatable="false">50MP + 8MP</string>
+    <string name="edith_spec_camera_front_subsummary" translatable="false">20MP</string>
+
+</resources>
