@@ -95,7 +95,6 @@ _displayservice_unresolved = (
     rb'[A-Za-z0-9_]*'
 )
 
-
 blob_fixups: blob_fixups_user_type = {
     ('odm/lib64/libmt_mitee.so', 'vendor/bin/hw/android.hardware.security.keymint@3.0-service.mitee', 'odm/lib64/libgoogleid.so'): blob_fixup()
         .replace_needed('android.hardware.security.keymint-V3-ndk.so', 'android.hardware.security.keymint-V3-ndk-v34.so'),
@@ -229,12 +228,16 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libaudioutils_shim.so')
         .replace_needed('android.media.audio.common.types-V5-ndk.so', 'android.media.audio.common.types-V3-ndk.so')
         .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk_prebuilt.so'),
+    (
+        'vendor/lib64/libaudioprimarydevicehalifclient.so',
+        'vendor/lib64/libnotifyaudiohal.so',
+    ): blob_fixup()
+        .add_needed('libaudioutils_shim.so')
+        .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk_prebuilt.so'),
     'vendor/lib64/libaudio_aidl_conversion_common_ndk_prebuilt.so': blob_fixup()
         .replace_needed('android.media.audio.common.types-V5-ndk.so', 'android.media.audio.common.types-V3-ndk.so'),
     'vendor/lib64/hw/android.hardware.soundtrigger3-impl.so': blob_fixup()
         .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk_prebuilt.so'),
-    'vendor/lib64/libaudio_aidl_conversion_common_ndk_prebuilt.so': blob_fixup()
-        .replace_needed('android.media.audio.common.types-V5-ndk.so', 'android.media.audio.common.types-V3-ndk.so'),
     (
          'vendor/lib64/soundfx/libswdapaidl.so',
          'vendor/lib64/soundfx/libswgamedapaidl.so',
