@@ -119,7 +119,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     MtkInCallService \
-    XiaomiDolby
+    HalcyonDolby
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_effects_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_config.xml \
@@ -298,7 +298,6 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlayKlee \
     FrameworksResOverlayKlee \
     NfcOverlayKlee \
-    Settings34IResOverlayKlee \
     SettingsResOverlayKlee \
     SystemUIOverlayKlee \
     TetheringConfigOverlay
