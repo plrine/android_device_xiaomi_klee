@@ -97,9 +97,6 @@ _displayservice_unresolved = (
 blob_fixups: blob_fixups_user_type = {
     ('odm/lib64/libmt_mitee.so', 'vendor/bin/hw/android.hardware.security.keymint@3.0-service.mitee', 'odm/lib64/libgoogleid.so'): blob_fixup()
         .replace_needed('android.hardware.security.keymint-V3-ndk.so', 'android.hardware.security.keymint-V4-ndk.so'),
-    ('odm/lib64/libmt_mitee.so', 'odm/lib64/libgoogleid.so'): blob_fixup()
-        .replace_needed('libkeymint_support.so', 'libkeymint_support_V4.so')
-        .remove_needed('libkeymint_remote_prov_support.so'),
     (
         'vendor/bin/mnld',
         'vendor/lib64/mt6899/libpqconfig.so',
