@@ -277,7 +277,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/mt6899/libmtkcam_hal_android_app_cbadaptor.so',
     ): blob_fixup()
         .replace_needed('android.frameworks.displayservice@1.0.so', 'lineage.frameworks.displayservice@1.0.so')
-        .binary_regex_replace(b'7android10frameworks14displayservice', b'7lineage10frameworks14displayservice')
+        .binary_regex_replace(b'_ZN7android10frameworks14displayservice', b'_ZN7lineage10frameworks14displayservice')
         .binary_regex_replace(_displayservice_unresolved, lambda m: _displayservice_ping.ljust(len(m.group(0)), b'\x00')),
 }  # fmt: skip
 
